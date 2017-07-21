@@ -58,6 +58,7 @@ namespace common
     static constexpr int nbCharOfOrderPrice = nbChar(maxOrderPrice);
     static constexpr int nbCharOfPricePrecision = 6;
     
+    //Contains counters for different type of errors
     struct Errors
     {
         // Parsing
@@ -101,6 +102,7 @@ namespace common
         unsigned long long cancelsLimitQtyTooLow = 0;
         unsigned long long cancelsLimitNotFound = 0;
         
+        //Will return sum of all errors
         unsigned long long nbErrors()
         {
             return  corruptedMessages +
