@@ -17,7 +17,7 @@ template <typename T, size_t _BlockCapacity = 262'144>
 class CircularBlock
 {
 public:
-    static constexpr size_t CAPACITY = _BlockCapacity;
+    static constexpr size_t CAPACITY = _BlockCapacity; //http://en.cppreference.com/w/cpp/language/constexpr
     static_assert(((CAPACITY > 0) && ((CAPACITY & (~CAPACITY + 1)) == CAPACITY)), "Block capacity must be a positive power of 2");
     
     static auto capacity()
