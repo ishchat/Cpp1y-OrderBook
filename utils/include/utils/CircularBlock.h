@@ -12,12 +12,16 @@ using namespace common;
 
 // !! Only One publisher / One Listener !!
 // Could consider yielding instead of spin loop
+//https://www.quora.com/What-is-the-difference-between-message-queue-pattern-and-publish-subscribe
 
 template <typename T, size_t _BlockCapacity = 262'144>
 class CircularBlock
 {
 public:
     static constexpr size_t CAPACITY = _BlockCapacity; //http://en.cppreference.com/w/cpp/language/constexpr
+    //http://en.cppreference.com/w/cpp/language/static_assert
+    
+    //The suggested code for checking if a number is power of 2 is slightly different : https://stackoverflow.com/questions/600293/how-to-check-if-a-number-is-a-power-of-2
     static_assert(((CAPACITY > 0) && ((CAPACITY & (~CAPACITY + 1)) == CAPACITY)), "Block capacity must be a positive power of 2");
     
     static auto capacity()
