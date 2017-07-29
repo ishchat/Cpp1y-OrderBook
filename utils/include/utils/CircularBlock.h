@@ -1,9 +1,12 @@
 #pragma once
+//https://en.wikipedia.org/wiki/C_preprocessor
+//https://en.wikipedia.org/wiki/Pragma_once
+//https://en.wikipedia.org/wiki/Include_guard
 
 #include "utils/Common.h"
 
-#include <atomic>
-#include <array>
+#include <atomic> //http://www.cplusplus.com/reference/atomic/atomic/
+#include <array> //http://en.cppreference.com/w/cpp/container/array
 
 using namespace common;
 
