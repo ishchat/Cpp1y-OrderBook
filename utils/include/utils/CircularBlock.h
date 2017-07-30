@@ -29,6 +29,8 @@ public:
         return CAPACITY;
     }
     
+    //http://www.bogotobogo.com/cplusplus/C11/C11_default_delete_specifier.php
+    //https://docs.microsoft.com/en-us/cpp/cpp/explicitly-defaulted-and-deleted-functions
     CircularBlock() = default;
     ~CircularBlock() = default;
     CircularBlock(const CircularBlock&) = delete;
